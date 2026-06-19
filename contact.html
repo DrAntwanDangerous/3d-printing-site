@@ -1,16 +1,38 @@
 <!DOCTYPE html>
-
+<html>
 <head>
-    <title>Contact us</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-</head>
+<body>
+
+<!-- ✅ HEADER / NAVBAR -->
+<header class="navbar">
+    <a href="index.html" class="logo">
+        <img src="images/homepage.jpg" alt="Home">
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="intro.html">Welcome</a>
+        <a href="p1.html">Prototype 1</a>
+        <a href="p2.html">Prototype 2</a>
+        <a href="p3.html">Prototype 3</a>
+        <a href="p4.html">Final Design</a>
+        <a href="compare.html">Compare</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
+
+
+<!-- ✅ CONTENT -->
 <div class="section">
     <h2>Contact / Feedback Form</h2>
     <h6>Please fill out the form below to get in touch or provide feedback on our prototypes.</h6>
 
-    <form action="#" method="GET">
+    <!-- ✅ FORM -->
+    <form action="thankyou.html" method="GET">
 
         <!-- Name -->
         <label for="name">Name:</label><br>
@@ -22,11 +44,10 @@
 
         <!-- Reason -->
         <label for="reason">Reason for enquiry or feedback:</label><br>
-        <textarea id="reason" name="reason" rows="4" cols="40" required></textarea><br><br>
+        <textarea id="reason" name="reason" rows="4" required></textarea><br><br>
 
         <!-- Prototype Preference -->
         <label>Prototype Preference:</label><br>
-
         <input type="radio" name="prototype" value="p1"> Prototype 1<br>
         <input type="radio" name="prototype" value="p2"> Prototype 2<br>
         <input type="radio" name="prototype" value="p3"> Prototype 3<br>
@@ -34,29 +55,16 @@
 
         <!-- Submit -->
         <input type="submit" value="Submit">
-        <br> <br>
-        <h5>Thank you for your feedback!</h5>
-        <form action="thankyou.html"></form>
-
     </form>
-    <footer>
-    <p>Navigation:</p>
 
-     <a href="index.html">Home</a> |
-    <a href="intro.html">Welcome</a> |
-    <a href="p1.html">Prototype 1</a> |
-    <a href="p2.html">Prototype 2</a> |
-    <a href="p3.html">Prototype 3</a> |
-    <a href="p4.html">Final Design</a>|
-    <a href="compare.html">Compare</a>|
-    <a href="contact.html">Contact </a>|
-
-    <p style="margin-top:10px; font-size:0.8em;">
-        © 2026 Anthony Tadic
-    </p>
-    <a href="index.html">
-        <img src="images/homepage.jpg">
-    </a>
-</footer>
+    <h5>Thank you for your feedback!</h5>
 </div>
+
+
+<!-- ✅ FOOTER -->
+<footer>
+    <p>© 2026 Anthony Tadic</p>
+</footer>
+
+</body>
 </html>
