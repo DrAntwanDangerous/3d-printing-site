@@ -19,14 +19,10 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
-    width: 100%;          /* ✅ ensures full width */
-    margin: 0;            /* ✅ removes offset */
-    
-    background: #222;
-    padding: 10px 20px;
+    justify-content: flex-start;
+    gap: 30px;   /* ✅ spaces logo + nav nicely */
 }
+
 
 /* NAV LINKS */
 .navbar nav a {
@@ -49,8 +45,13 @@ body {
 }
 
 /* HEADINGS */
-h1, h2, h3, h4, h5 {
+ h2, h3, h4, h5 {
     text-align: left;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}h1 {
+    text-align: center;
     font-weight: bold;
     margin-bottom: 15px;
     letter-spacing: 2px;
