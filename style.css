@@ -8,9 +8,9 @@
 /* BODY (fix navbar shift issue) */
 body {
     font-family: "Courier New", monospace;
-    background: linear-gradient(135deg, #ff00cc, #3333ff, #00ffcc);
+    background: linear-gradient(135deg, #0b1020, #3776ab, #00ff41);
     background-size: 400% 400%;
-    color: #ffffff;
+    color: #e6edf3;
 
     padding: 20px 0;   /* ✅ fixed (no left/right push) */
 }
@@ -33,7 +33,7 @@ body {
 }
 
 .active {
-    color: yellow;
+    color: #ffd43b;
 }
 
 /* LOGO */
@@ -56,29 +56,29 @@ body {
 
 h1 {
     font-size: 3em;
-    color: #ffff00;
-    text-shadow: 3px 3px 0 black, 6px 6px 0 #ff0000;
+    color: #ffd43b;
+    text-shadow: 3px 3px 0 #0b1020, 6px 6px 0 #00ff41;
 }
 
 h2 {
     font-size: 2.3em;
-    color: #00ffff;
-    text-shadow: 2px 2px 0 black;
+    color: #3776ab;
+    text-shadow: 2px 2px 0 #0b1020;
 }
 
 h3 {
     font-size: 1.8em;
-    color: #ff00cc;
-    text-shadow: 2px 2px 0 black;
+    color: #00ff41;
+    text-shadow: 2px 2px 0 #0b1020;
 }
 
 h5 {
-    color: #ffd700;
+    color: #ffd43b;
 }
 
 h6 {
     text-align: left;
-    color: #88c920;
+    color: #00ff41;
     margin-bottom: 10px;
 }
 
@@ -90,21 +90,21 @@ h6 {
 
     text-align: left;
 
-    background: rgba(0, 0, 0, 0.75);
-    border: 4px solid #00ffcc;
+    background: rgba(11, 16, 32, 0.82);
+    border: 4px solid #3776ab;
     border-radius: 12px;
-    box-shadow: 6px 6px 0 black;
+    box-shadow: 6px 6px 0 #00ff41;
 }
 
 /* LINKS */
 a {
-    color: #00ffcc;
+    color: #ffd43b;
     text-decoration: none;
 }
 
 a:hover {
-    color: #ffff00;
-    text-shadow: 0 0 5px #ffff00;
+    color: #00ff41;
+    text-shadow: 0 0 5px #00ff41;
 }
 
 /* LISTS */
@@ -138,8 +138,8 @@ li {
     margin: 20px auto;
     height: auto;
 
-    border: 6px solid black;
-    box-shadow: 6px 6px 0 black;
+    border: 6px solid #0b1020;
+    box-shadow: 6px 6px 0 #00ff41;
 }
 
 /* CENTER TEXT */
@@ -158,7 +158,7 @@ input, textarea {
     padding: 8px;
     margin: 5px 0;
 
-    border: 3px solid black;
+    border: 3px solid #3776ab;
     border-radius: 5px;
     font-family: "Courier New", monospace;
 }
@@ -170,38 +170,38 @@ input[type="radio"] {
 
 /* SUBMIT BUTTON */
 input[type="submit"] {
-    background: #ff00cc;
-    color: white;
+    background: #3776ab;
+    color: #ffffff;
     font-weight: bold;
     cursor: pointer;
     padding: 10px 15px;
 }
 
 input[type="submit"]:hover {
-    background: #ffff00;
-    color: black;
+    background: #ffd43b;
+    color: #0b1020;
 }
 
 /* TABLE */
 table {
     width: 100%;
     border-collapse: collapse;
-    background: rgba(0,0,0,0.8);
+    background: rgba(11,16,32,0.88);
 }
 
 th {
-    background: #00ffcc;
-    color: black;
+    background: #3776ab;
+    color: #ffffff;
     padding: 10px;
 }
 
 td {
     padding: 10px;
-    border: 2px solid black;
+    border: 2px solid #0b1020;
 }
 
 tr:nth-child(even) {
-    background: rgba(255,255,255,0.1);
+    background: rgba(0,255,65,0.12);
 }
 
 /* FOOTER */
@@ -209,8 +209,8 @@ footer {
     text-align: center;
     margin-top: 40px;
     padding: 15px;
-    border-top: 3px solid black;
-    background: rgba(0,0,0,0.6);
+    border-top: 3px solid #00ff41;
+    background: rgba(11,16,32,0.75);
 }
 
 /* FOOTER IMAGE */
@@ -219,9 +219,10 @@ footer img {
     margin: 20px auto;
     display: block;
 
-    border: 6px solid black;
-    box-shadow: 5px 5px 0 black;
+    border: 6px solid #0b1020;
+    box-shadow: 5px 5px 0 #00ff41;
 }
+
 .center-img {
     display: block;
     margin-left: auto;
@@ -231,9 +232,8 @@ footer img {
     max-width: 80%;   /* ✅ keeps it responsive */
     height: auto;
 
-    border: 6px solid black;
+    border: 6px solid #0b1020;
     padding: 10px;
-    background: white;
-    box-shadow: 8px 8px 0 black;
+    background: #e6edf3;
+    box-shadow: 8px 8px 0 #00ff41;
 }
-
