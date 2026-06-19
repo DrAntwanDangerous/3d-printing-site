@@ -5,13 +5,47 @@
     box-sizing: border-box;
 }
 
-/* BODY (retro gradient background) */
+/* BODY (fix navbar shift issue) */
 body {
     font-family: "Courier New", monospace;
     background: linear-gradient(135deg, #ff00cc, #3333ff, #00ffcc);
     background-size: 400% 400%;
     color: #ffffff;
-    padding: 20px;
+
+    padding: 20px 0;   /* ✅ fixed (no left/right push) */
+}
+
+/* NAVBAR (full width now) */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;          /* ✅ ensures full width */
+    margin: 0;            /* ✅ removes offset */
+    
+    background: #222;
+    padding: 10px 20px;
+}
+
+/* NAV LINKS */
+.navbar nav a {
+    color: white;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.navbar nav a:hover {
+    text-decoration: underline;
+}
+
+.active {
+    color: yellow;
+}
+
+/* LOGO */
+.logo img {
+    height: 40px;   /* ✅ slightly smaller */
 }
 
 /* HEADINGS */
@@ -23,33 +57,25 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-    font-size: 3.2em;
+    font-size: 3em;
     color: #ffff00;
-    text-shadow: 3px 3px 0 black, 6px 6px 0 #ff0000, 0 0 10px #ffff00;
+    text-shadow: 3px 3px 0 black, 6px 6px 0 #ff0000;
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 2.3em;
     color: #00ffff;
-    text-shadow: 2px 2px 0 black, 0 0 8px #00ffff;
+    text-shadow: 2px 2px 0 black;
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 1.8em;
     color: #ff00cc;
-    text-shadow: 2px 2px 0 black, 0 0 6px #ff00cc;
-}
-
-h4 {
-    font-size: 1.6em;
-    color: #00ff66;
-    text-shadow: 2px 2px 0 black, 0 0 6px #00ff66;
+    text-shadow: 2px 2px 0 black;
 }
 
 h5 {
-    font-size: 1.2em;
     color: #ffd700;
-    text-shadow: 2px 2px 0 black, 3px 3px 0 #8b0000;
 }
 
 h6 {
@@ -58,7 +84,7 @@ h6 {
     margin-bottom: 10px;
 }
 
-/* SECTIONS */
+/* SECTION (main content box) */
 .section {
     max-width: 900px;
     margin: 20px auto;
@@ -75,7 +101,6 @@ h6 {
 /* LINKS */
 a {
     color: #00ffcc;
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -93,33 +118,6 @@ li {
     margin-bottom: 8px;
 }
 
-/* NAVBAR */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #222;
-    padding: 10px 20px;
-}
-
-.navbar nav a {
-    color: white;
-    margin: 0 10px;
-}
-
-.navbar nav a:hover {
-    text-decoration: underline;
-}
-
-.active {
-    color: yellow;
-}
-
-/* LOGO */
-.logo img {
-    height: 50px;
-}
-
 /* IMAGE ROW */
 .image-row {
     display: flex;
@@ -129,22 +127,29 @@ li {
 }
 
 .image-row img {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
 }
 
-/* CENTER IMAGE (main pages) */
-.center-img {
+/* HEADER IMAGE (✅ smaller now) */
+.header-img {
     display: block;
-    margin: 30px auto;
+    width: 300px;        /* ✅ MUCH smaller */
+    max-width: 80%;
+    margin: 20px auto;
+    height: auto;
+
     border: 6px solid black;
-    padding: 10px;
-    background: white;
-    box-shadow: 8px 8px 0 black;
+    box-shadow: 6px 6px 0 black;
 }
 
-/* FORM (✅ LEFT ALIGNED NOW) */
+/* CENTER TEXT */
+.center-text {
+    text-align: center;
+}
+
+/* FORM */
 form {
     text-align: left;
 }
@@ -152,7 +157,6 @@ form {
 input, textarea {
     width: 100%;
     max-width: 400px;
-
     padding: 8px;
     margin: 5px 0;
 
@@ -161,10 +165,9 @@ input, textarea {
     font-family: "Courier New", monospace;
 }
 
-/* RADIO BUTTONS (keep inline) */
+/* RADIO BUTTONS */
 input[type="radio"] {
     width: auto;
-    margin-right: 5px;
 }
 
 /* SUBMIT BUTTON */
@@ -173,7 +176,6 @@ input[type="submit"] {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    width: auto;
     padding: 10px 15px;
 }
 
@@ -211,35 +213,28 @@ footer {
     padding: 15px;
     border-top: 3px solid black;
     background: rgba(0,0,0,0.6);
-    color: #ddd;
 }
 
 /* FOOTER IMAGE */
 footer img {
-    display: block;
+    width: 250px;   /* ✅ smaller */
     margin: 20px auto;
-    width: 300px;
+    display: block;
+
     border: 6px solid black;
     box-shadow: 5px 5px 0 black;
 }
-
-footer img:hover {
-    transform: scale(1.05);
-    transition: 0.2s;
-}
-/* Header Image (smaller + clean) */
-.header-img {
+.center-img {
     display: block;
-    width: 600px;        /* ✅ controls size */
-    max-width: 90%;      /* ✅ responsive on small screens */
-    margin: 20px auto;   /* ✅ centers it */
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 400px;     /* ✅ adjust size here */
+    max-width: 80%;   /* ✅ keeps it responsive */
     height: auto;
 
     border: 6px solid black;
-    box-shadow: 6px 6px 0 black;
-}
-
-/* Center text */
-.center-text {
-    text-align: center;
+    padding: 10px;
+    background: white;
+    box-shadow: 8px 8px 0 black;
 }
